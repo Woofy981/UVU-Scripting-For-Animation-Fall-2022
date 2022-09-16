@@ -1,0 +1,75 @@
+using System;
+
+namespace _5IfStatements
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string weather, hotCold, dayNight, happySad, boardVideo;
+            // ask the user the weather
+            Console.WriteLine("Is the current weather sunny or cloudy? (s for sunny, c for cloudy)");
+            // recieve user input
+            weather = Console.ReadLine();
+            // if the weather is sunny asign sunny to the variable
+            if (weather == "s" || weather == "S")
+                weather = "sunny";
+            // if the weather is cloudy asign cloudy to the variable
+            else
+                weather = "cloudy";
+
+            // ask if the user preffers hot or cold
+            Console.WriteLine("Do you prefer hot or cold? (h for hot, c for cold)");
+            // recieve user input
+            hotCold = Console.ReadLine();
+            // if the user prefers hot asign hot to the variable
+            if (hotCold == "h" || hotCold == "H")
+                hotCold = "hot";
+            // if the user prefers cold asign cold to the variable
+            else
+                hotCold = "cold";
+
+            // ask if the user preffers day or night
+            Console.WriteLine("Do you prefer day or night? (d for day, n for night)");
+            // recieve user input
+            dayNight = Console.ReadLine();
+            // if the user prefers day asign day to the variable
+            if (dayNight == "d" || dayNight == "D")
+                dayNight = "day";
+            // if the user prefers night asign night to the variable
+            else
+                dayNight = "night";
+
+            // ask if the user if they're happy or sad
+            Console.WriteLine("Are you happy or sad? (h for happy, s for sad)");
+            // recieve user input
+            happySad = Console.ReadLine();
+            // if the user is happy
+            if (happySad == "h" || happySad == "H")
+                happySad = "happy";
+            // if the user is sad
+            else
+                happySad = "sad";
+
+            // ask if the user preffers board or video games
+            Console.WriteLine("Do you prefer board games or video games? (b for board games, v for video games)");
+            // recieve user input
+            boardVideo = Console.ReadLine();
+            // if the user prefers board asign board games to the variable
+            if (boardVideo == "b" || boardVideo == "B")
+                boardVideo = "board games";
+            // if the user prefers video asign video games to the variable
+            else
+                boardVideo = "video games";
+
+            // output
+            Console.WriteLine("The current weather is: " + weather);
+            Console.WriteLine("You prefer: " + hotCold);
+            Console.WriteLine("You prefer: " + dayNight);
+            Console.WriteLine("You are: " + happySad);
+            Console.WriteLine("You prefer: " + boardVideo);
+
+            Console.WriteLine();
+        }
+    }
+}
