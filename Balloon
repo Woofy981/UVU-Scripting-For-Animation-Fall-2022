@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine
+
+public class Balloon : MonoBehavior
+{
+
+    public int popClicks = 3;
+    public float increaseScale = 0.10f;
+    public int givePoints = 100;
+    private ScoreManager scoreManager;
+
+    void Start()
+    {
+        // find the scoreManager object
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+    }
+
+    void OnMouseDown()
+    {
+        // Decrease amount to click before popping
+        popClicks -= 1;
+        // Increase balloon size
+        transform.localScale += Vector3.one * increaseScale;
+
+        if(popClicks == 0)
+        {
+            // Add points to score text
+            scoreManager.IncreaseScoreText(givePoints);
+            // Destroy balloon
+            Destroy(GameObject);
+        }
+    }
+}
